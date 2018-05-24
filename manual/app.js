@@ -9,6 +9,14 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
+app.get('/viktor', (req, res) => {
+  res.render('viktor');
+})
+
+app.get('/huy/:length', (req, res) => {
+  res.render('huy', {length: req.params.length});
+})
+
 app.get('/pasha', (req, res) => {
   res.render('petuh');
 })

@@ -9,9 +9,12 @@
 </head>
 <body>
   <% include header.ejs %>
-  <h1>Welcome to my test index page</h1>
-  <h2><a href="/viktor">god's page</a></h2>
-  <h2><a href="/pasha">petuh's page</a></h2>
+  <h1>your dick's length is <%= length %></h1>
+  <% var a %>
+  <% if (length < 12) a = 'хуево' %>
+  <% if (length >= 12) a = 'ну пойдет' %>
+  <% if (length >= 20) a = 'заебись' %>
+  <h2> <%= a %>  </h2>
   <% include footer.ejs %>
 </body>
 </html>
