@@ -6,15 +6,16 @@ app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {qs: req.query});
 })
 
 app.get('/viktor', (req, res) => {
   res.render('viktor');
 })
 
-app.get('/huy/:length', (req, res) => {
-  res.render('huy', {length: req.params.length});
+app.get('/huy', (req, res) => {
+  const length = req.query.length;
+  res.render('huy', {length: length});
 })
 
 app.get('/pasha', (req, res) => {
